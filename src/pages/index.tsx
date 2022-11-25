@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import React, { type MouseEvent, useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 
 interface Books {
   id: number;
