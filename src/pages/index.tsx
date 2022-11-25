@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import React, { type MouseEvent, useEffect, useState } from "react";
 
 interface Books {
   id: number;
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const { title, author, genre } = book;
     fetch("/api/books", {
